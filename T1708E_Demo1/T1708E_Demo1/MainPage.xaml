@@ -1,0 +1,95 @@
+﻿<Page
+    x:Class="T1708E_Demo1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:T1708E_Demo1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer>
+        <ScrollViewer.Background>
+            <ImageBrush ImageSource="/Assets/bg4.jpg" Stretch="UniformToFill"/>
+        </ScrollViewer.Background>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <TextBlock Text="CREATE AN ACCOUNT" FontFamily="tahoma" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFD85028"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0"></Grid>
+                    <Grid Grid.Column="1">
+
+                        <StackPanel Margin="20, 0, 0, 0" HorizontalAlignment="Center" x:Name="ParentStackPanel">
+                            <TextBox x:Name="Email" Margin="0, 20, 0, 0" Header="Email" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="293" Background="#66EDF364" FontFamily="Tahoma" FontSize="16"/>
+                            <TextBlock x:Name="Email_Message"/>
+                            <PasswordBox x:Name="Password" Margin="0, 20, 0, 0" Header="Password" Width="293" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#66EDF364" FontFamily="Tahoma" FontSize="16"/>
+                            <TextBlock x:Name="Password_Message"/>
+                            <TextBox x:Name="FirstName" Margin="0, 20, 0, 0" Header="First Name" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="293" Background="#66EDF364" FontFamily="Tahoma" FontSize="16"/>
+                            <TextBlock x:Name="Firstname_Message"/>
+                            <TextBox x:Name="LastName" Margin="0, 20, 0, 0" Header="Last Name" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="293" Background="#66EDF364" FontFamily="Tahoma" FontSize="16"/>
+                            <TextBlock x:Name="Lastname_Message"/>
+                            <TextBox x:Name="Phone" Margin="0, 20, 0, 0" Header="Phone Number" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="293" Background="#66EDF364" FontFamily="Tahoma" FontSize="16"/>
+                            <TextBlock x:Name="Phone_Message"/>
+                            <TextBlock Text="Gender" Margin="0, 20, 0, 0" Width="290" HorizontalAlignment="Left"/>
+                            <TextBlock x:Name="Gender_Message"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                                <RadioButton Content="Male" Tag="1" Checked="Select_Gender"/>
+                                <RadioButton Content="Female" Tag="0" Checked="Select_Gender"/>
+                                <RadioButton Content="Other" Tag="2" Checked="Select_Gender" IsChecked="True"/>
+                            </StackPanel>
+                            <CalendarDatePicker x:Name="BirthDay" Header="Birthday" Margin="0, 20, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Background="#66EDF364" FontFamily="Tahoma" FontSize="16" DateChanged="Change_Birthday"/>
+                            <TextBlock x:Name="Birthday_Message"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid Grid.Column="2">
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBox AcceptsReturn="True" x:Name="Address" Margin="0, 15, 0, 0" Header="Address" HorizontalAlignment="Left" Width="293" Height="100" Background="#66EDF364" FontFamily="Tahoma" FontSize="16" TextChanged="Address_TextChanged"/>
+                            <TextBox AcceptsReturn="True" x:Name="Introduction" Margin="0, 20, 0, 0" Header="Introduction" HorizontalAlignment="Left" Width="293" Height="100" Background="#66EDF364" FontFamily="Tahoma" FontSize="16"/>
+                            <Button Content="Capture Your Photo" Margin="0,20,0,0" VerticalAlignment="Top" Width="160" Height="50" Background="#FFE6B257" FontFamily="Tahoma" FontSize="16" Click="Capture_Photo"/>
+                            <Image x:Name="MyAvatar" Margin="0,20,0,0" Width="140" Height="140" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <TextBox x:Name="ImageUrl" Margin="0,20,0,0" Header="Avatar Url" HorizontalAlignment="Left" Text="" VerticalAlignment="Bottom" Width="393" Background="#66EDF364" FontFamily="Tahoma" FontSize="16"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Column="3"></Grid>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0"></Grid>
+                    <Grid Grid.Column="1"></Grid>
+                    <Grid Grid.Column="2">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button x:Name="BtnSignup" Content="Sign Up" HorizontalAlignment="Left" Background="#FF0DB066" Width="110" Height="45" Margin="20,0,20,0" FontFamily="Tahoma" FontSize="22" Click="Handle_Signup"/>
+                            <Button x:Name="BtnReset" Content="Reset" HorizontalAlignment="Right" Background="#FF0DB066" Width="110" Height="45" Margin="20,0,20,0" FontFamily="Tahoma" FontSize="22" Click="btn_Reset" />
+                            <HyperlinkButton Content="I already have an account." HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16"  Height="55" Width="Auto" Margin="20,25,20,0" FontFamily="Tahoma" Click="btn_LoginForm"/>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Frame x:Name="MainFrame"></Frame>
+        </Grid>
+    </ScrollViewer>
+
+
+
+</Page>

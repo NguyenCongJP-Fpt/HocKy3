@@ -1,0 +1,48 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="KaniMusic_UWP.Views.ListView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KaniMusic_UWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:entity="using:KaniMusic_UWP.Entity"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Pivot>
+        <Pivot.Title>
+            <TextBlock Text="Danh Sach Bai Hat"/>
+        </Pivot.Title>
+        <Pivot.RightHeader>
+            <CommandBar Margin="0,0,50,0">
+                <AppBarButton Icon="List"/>
+                <AppBarButton Icon="Add"/>
+                <AppBarButton Icon="AddFriend"/>
+            </CommandBar>
+        </Pivot.RightHeader>
+
+        <PivotItem Header="List Song">
+            <Grid>
+                <Button x:ConnectionId='5' Content="Goto Home"                 />
+                <ListView x:ConnectionId='6'                                >
+                    <ListView.ItemTemplate>
+                        <DataTemplate                         >
+                            <StackPanel x:ConnectionId='7' Orientation="Horizontal" Margin="0,10,0,10">
+                                <Image x:ConnectionId='8'                             Width="100"/>
+                                <TextBlock x:ConnectionId='9'                      Margin="20,0,0,0"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </PivotItem>
+        <PivotItem Header="Add Song">
+            <StackPanel>
+                <TextBox x:ConnectionId='2' x:Name="SongName" Header="Song Name"/>
+                <TextBox x:ConnectionId='3' x:Name="SongThumbnail" Header="Link"/>
+                <Button x:ConnectionId='4' Content="Save"                 Margin="0,10,0,0"/>
+            </StackPanel>
+        </PivotItem>
+    </Pivot>
+</Page>
+

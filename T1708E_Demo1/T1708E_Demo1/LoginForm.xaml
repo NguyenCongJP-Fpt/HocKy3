@@ -1,0 +1,99 @@
+﻿<Page
+    x:Class="T1708E_Demo1.LoginForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:T1708E_Demo1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <ScrollViewer>
+            <ScrollViewer.Background>
+                <ImageBrush ImageSource="/Assets/bg1.png" Stretch="Fill"/>
+            </ScrollViewer.Background>
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="3*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="8*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="1">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="4*"/>
+                                            <RowDefinition Height="1*"/>
+                                            <RowDefinition Height="2*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid Grid.Row="0">
+                                            <Grid.Background>
+                                                <ImageBrush ImageSource="/Assets/logo_app.png" Stretch="Uniform"/>
+                                            </Grid.Background>
+                                            <TextBlock HorizontalAlignment="Center" Text="KANI MUSIC" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="48" FontWeight="Bold" FontFamily="Kristen ITC" Foreground="#FFF59408"/>
+                                        </Grid>
+                                        <Grid Grid.Row="1">
+                                            <TextBlock HorizontalAlignment="Center" Text="Hãy Nghe Theo Cách Của Bạn" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="#FFA64006" FontFamily="Lucida Calligraphy" FontSize="24"/>
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="*"/>
+
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="100" Grid.RowSpan="1">
+                            <Grid.Background>
+                                <ImageBrush ImageSource="/Assets/signin.png"/>
+                            </Grid.Background>
+                        </Grid>
+                        <Grid Grid.Row="1">
+                            <StackPanel  VerticalAlignment="Center" Width="300" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0">
+                                <TextBox x:Name="Email" Margin="0,10,0,0" Header="Email" FontSize="20" HorizontalAlignment="Center" Text="" VerticalAlignment="Top" Width="300"  Height="69" Background="#99FBFBFB" FontFamily="Tahoma"/>
+                                <TextBlock x:Name="Username_Message"/>
+                                <PasswordBox x:Name="Password" Margin="0,10,0,0" Header="Password" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Width="300" Height="69" Background="#99FBFBFB" FontFamily="Tahoma"/>
+                                <TextBlock x:Name="Password_Message"/>
+                                <Button Content="Login" FontSize="20" HorizontalAlignment="Center" Margin="0,20,0,10" VerticalAlignment="Center" Height="40" Width="100" Background="#4caf50" Click="btn_Login"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="0">
+                                        <HyperlinkButton Content="Forgot Password" HorizontalAlignment="Center" FontSize="15" Height="55" Width="120" FontFamily="Tahoma" Foreground="#FF0B56D8"/>
+                                    </Grid>
+                                    <Grid Grid.Column="1">
+                                        <HyperlinkButton Content="Register" HorizontalAlignment="Center" FontSize="15"  Height="55" Width="120" FontFamily="Tahoma" Foreground="#FF0B56D8" Click="btn_RegisterForm"/>
+                                    </Grid>
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+                        <Grid Grid.Row="2">
+                            <!--Phần này sẽ update sau-->
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+        <Frame x:Name="LoginFrame"></Frame>
+    </Grid>
+</Page>
