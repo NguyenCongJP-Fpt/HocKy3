@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth_Login_Google", "Auth_Login_Google\Auth_Login_Google.csproj", "{B566717A-A74C-4ADD-8398-1DE612291E97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B566717A-A74C-4ADD-8398-1DE612291E97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B566717A-A74C-4ADD-8398-1DE612291E97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B566717A-A74C-4ADD-8398-1DE612291E97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B566717A-A74C-4ADD-8398-1DE612291E97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {457FAB1A-F8DD-4366-9ECE-1423618A3B07}
+	EndGlobalSection
+EndGlobal
